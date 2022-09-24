@@ -1,13 +1,14 @@
+import { ReactNode } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { NavLinkContainer } from './styles';
 
 interface Props {
-  title: string;
   path: string;
   includes?: boolean;
+  children?: ReactNode;
 }
 
-export default function NavLink({ title, path, includes = false }: Props) {
+export default function NavLink({ path, includes = false, children }: Props) {
   const router = useLocation();
 
   function verifyIfIsActive() {
@@ -21,7 +22,7 @@ export default function NavLink({ title, path, includes = false }: Props) {
   return (
     <NavLinkContainer isActive={isActive}>
       <Link to={path} >
-        <a>{title}</a>
+        <a>{children}</a>
       </Link>
     </NavLinkContainer>
   );

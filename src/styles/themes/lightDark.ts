@@ -2,26 +2,25 @@ export const lightTheme = {
   title: 'light',
 
   colors: {
+    // Header
+    "background_header": '#fff',
+
+    "textMenuBarActive": '#000',
+    "textMenuBarOff": '#C4C4C4',
+    "textHighlight": '#fff',
+    "background_menu": '#E6E2E2',
+
     "text_primary": '#000',
-    "text_secondary": '#EE6666',
+    "text_secondary": '#000',
     "text_tertiary": '#939393',
 
+    "background_body": '#A2A2A2',
     "background": '#F7F5F4',
 
     "primary": '#EB622F',
-    "feature": '#F47E52',
-    "bug": '#EE6666',
-    "deploy": '#71E567',
-    "infra": '#525BCF',
-    "placeholder": '#BBBBBB',
-    "components_background": '#71E567',
-    "border": '#D8D8D8',
-    "switch": '#EB622F',
-    "textMenuBarActive": '#EE6666',
-    "textMenuBarOff": '#000',
+
     "textMenuHover": '#EE6666',
     "text": '#848DA0',
-    "textHighlight": '#444B5B',
     "textLight": '#C4C4C4',
   },
 
@@ -38,7 +37,8 @@ export const darkTheme = {
     "text_primary": '#BBBBBB',
     "text_secondary": '#C6C6C6',
     "text_tertiary": '#939393',
-
+    "background_header": '#514B47',
+    "background_menu": '#fff',
     "background": '#1B1B1B',
 
     "primary": '#EB622F',

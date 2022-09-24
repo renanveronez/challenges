@@ -2,14 +2,16 @@ import { Route, Routes } from "react-router-dom";
 import { DefaultLayout } from "./styles/DefaultLayout";
 
 import { Home } from "./Pages/Home";
-import { Second } from "./Pages/Second";
+import { Codes } from "./Pages/Codes";
+import { Tests } from "./Pages/Tests"
 
 export function Router() {
   return (
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/second" element={<Second />} />
+        <Route path="/codes" element={<Codes />} />
+        <Route path="/tests" element={<Tests />} />
       </Route>
     </Routes>
   )

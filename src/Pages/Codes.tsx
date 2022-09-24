@@ -1,6 +1,6 @@
 import { HomeContainer } from "../styles";
 
-export function Second() {
+export function Codes() {
 
   return (
     <HomeContainer>

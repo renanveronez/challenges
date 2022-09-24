@@ -1,6 +1,6 @@
 import NavLink from './activeLink';
 import { useState } from 'react'
-import { Container, Desktop } from "./styles";
+import { Container, Desktop, Mobile } from "./styles";
 
 
 export function MenuResponsive() {
@@ -15,55 +15,70 @@ export function MenuResponsive() {
           </div>
 
           <div className="mainMenu">
-            <div className={classOn ? "menuSectionOn" : "menuSection"} onClick={() => setClassOn(!classOn)}>
-              <div className="menuToggle">
-                <div className="one"></div>
-                <div className="two"></div>
-                <div className="three"></div>
-              </div>
-              <Desktop>
-                <nav className="listItems">
-                  <ul className="menu">
-                    <li className="item">
-                      <NavLink title="Home" path="/" />
-                    </li>
-                    <li className="item">Services
-                      <ul className="submenu">
-                        <li className="subItem">
-                          <div className="textMenu">
-                            <NavLink title="Second" path="/second" />
-                          </div>
-                        </li>
 
-                      </ul>
-                    </li>
-                    <li className="item">Products
-                      <ul className="submenu">
-                        <li className="subItem">
-                          <div className="textMenu">
-                            <NavLink title="Second" path="/second" />
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </nav>
-              </Desktop>
-
-              <nav className="listItemsMobile">
-                <ul className="menu">
+            <Desktop>
+              <ul className="menu">
+                <NavLink path="/">
                   <li className="item">
-                    <NavLink title="Home" path="/second" />
+                    Home
                   </li>
-                  <li className="subItem">
-                    <NavLink title="Home" path="/second" />
-                  </li>
-                </ul>
-              </nav>
-            </div>
+                </NavLink>
+                <li className="item">Codes
+                  <ul className="submenu">
+                    <NavLink path="/second" >
+                      <li className="subItem">
+                        <div className="textMenu">
+                          Second
+                        </div>
+                      </li>
+                    </NavLink>
+                  </ul>
+                </li>
+                <li className="item">Test
+                  <ul className="submenu">
+                    <NavLink path="/tests" >
+                      <li className="subItem">
+                        <div className="textMenu">
+                          Test
+                        </div>
+                      </li>
+                    </NavLink>
+                  </ul>
+                </li>
+              </ul>
+            </Desktop>
+
+            <Mobile>
+              <div className="mainMenu">
+                <div className={classOn ? "menuSectionOn" : "menuSection"} onClick={() => setClassOn(!classOn)}>
+                  <div className="menuToggle">
+                    <div className="one"></div>
+                    <div className="two"></div>
+                    <div className="three"></div>
+                  </div>
+
+                  <nav className="menuMobile">
+                    <ul className="menu">
+                      <NavLink path="/second">
+                        <li className="item">
+                          Home
+                        </li>
+                      </NavLink>
+                      <NavLink path="/second" >
+                        <li className="subItem">
+                          Second
+                        </li>
+                      </NavLink>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </Mobile>
+
           </div>
         </div>
-      </Container>
+
+      </Container >
     </>
   )
 }
